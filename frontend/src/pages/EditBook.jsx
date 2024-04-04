@@ -17,7 +17,7 @@ const editBook = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:5555/books/${id}`)
+      .get(`https://book-store-api-lakhan3011s-projects.vercel.app/books/${id}`)
       .then((response) => {
         setAuthor(response.data.author);
         setTitle(response.data.title);
@@ -39,7 +39,10 @@ const editBook = () => {
     };
     setLoading(true);
     axios
-      .put(`http://localhost:5555/books/${id}`, data)
+      .put(
+        `https://book-store-api-lakhan3011s-projects.vercel.app/books/${id}`,
+        data
+      )
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Book Edited Successfully", { variant: "success" });
