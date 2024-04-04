@@ -15,7 +15,7 @@ app.use(express.json());
 // Option:2 Allow custom origin
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://book-store-frontend-lakhan3011s-projects.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type"],
   })
